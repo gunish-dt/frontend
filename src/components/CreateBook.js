@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+//import api from "../axiosConfig.js";
 import axios from "axios";
 
 class CreateBook extends Component {
@@ -33,7 +34,7 @@ class CreateBook extends Component {
     };
 
     axios
-      .post("http://localhost:8082/api/books", data)
+      .post("http://localhost:8082/api/books/", data)
       .then((res) => {
         this.setState({
           title: "",
