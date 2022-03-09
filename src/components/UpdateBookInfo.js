@@ -21,7 +21,7 @@ class UpdateBookInfo extends Component {
     // console.log("Print id: " + this.props.match.params.id);
     axios
       .get(
-        "http://backend-gunish-env-service:8082/api/books/" +
+        "http://gunishbackend.devtron.info:31585/api/books/" +
           this.props.match.params.id
       )
       .then((res) => {
@@ -58,7 +58,7 @@ class UpdateBookInfo extends Component {
 
     axios
       .put(
-        "http://backend-gunish-env-service:8082/api/books/" +
+        "http://gunishbackend.devtron.info:31585/api/books/" +
           this.props.match.params.id,
         data
       )

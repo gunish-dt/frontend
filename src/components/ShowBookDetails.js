@@ -16,7 +16,7 @@ class showBookDetails extends Component {
     // console.log("Print id: " + this.props.match.params.id);
     axios
       .get(
-        "http://backend-gunish-env-service:8082/api/books/" +
+        "http://gunishbackend.devtron.info:31585/api/books/" +
           this.props.match.params.id
       )
       .then((res) => {
@@ -32,7 +32,7 @@ class showBookDetails extends Component {
 
   onDeleteClick(id) {
     axios
-      .delete("http://backend-gunish-env-service:8082/api/books/" + id)
+      .delete("http://gunishbackend.devtron.info:31585/api/books/" + id)
       .then((res) => {
         this.props.history.push("/");
       })
