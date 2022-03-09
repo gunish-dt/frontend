@@ -1,6 +1,7 @@
 {
   "name": "mern_a_to_z_client",
   "version": "0.1.0",
+  "proxy": "https://gunishbackend.devtron.info:31585",
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
