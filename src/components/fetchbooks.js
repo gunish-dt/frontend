@@ -5,7 +5,7 @@ window.onload = function fetchBooks() {
     "application/json;charset=utf-8";
   axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
   axios
-    .get("http://localhost:8082/api/books/")
+    .get("http://backend-gunish-env-service:8082/api/books/")
     .then((res) => {
       this.setState({
         books: res.data,
