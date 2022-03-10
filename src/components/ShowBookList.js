@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "../App.css";
 import axios from "axios";
-//import api from "../axiosConfig.js";
 import { Link } from "react-router-dom";
 import BookCard from "./BookCard";
-import "./fetchbooks";
 
 class ShowBookList extends Component {
   constructor(props) {
@@ -12,6 +10,19 @@ class ShowBookList extends Component {
     this.state = {
       books: [],
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:8082/api/books")
+      .then((res) => {
+        this.setState({
+          books: res.data,
+        });
+      })
+      .catch((err) => {
+        console.log("Error from ShowBookList");
+      });
   }
 
   render() {
