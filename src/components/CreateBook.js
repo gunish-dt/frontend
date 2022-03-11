@@ -33,7 +33,7 @@ class CreateBook extends Component {
     };
 
     axios
-      .post("https://gunishbackend.devtron.info:31585/api/books/", data)
+      .post("http://gunishbackend.devtron.info:31585/api/books/", data)
       .then((res) => {
         this.setState({
           title: "",
