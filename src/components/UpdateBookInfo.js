@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../App.css";
-//import api from "../axiosConfig.js";
 
 class UpdateBookInfo extends Component {
   constructor(props) {
@@ -21,7 +20,7 @@ class UpdateBookInfo extends Component {
     // console.log("Print id: " + this.props.match.params.id);
     axios
       .get(
-        "http://gunishbackend.devtron.info:31585/api/books/" +
+        "https://gunishbackend.devtron.info:31585/api/books/" +
           this.props.match.params.id
       )
       .then((res) => {
@@ -58,7 +57,7 @@ class UpdateBookInfo extends Component {
 
     axios
       .put(
-        "http://gunishbackend.devtron.info:31585/api/books/" +
+        "https://gunishbackend.devtron.info:31585/api/books/" +
           this.props.match.params.id,
         data
       )

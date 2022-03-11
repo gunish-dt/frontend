@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-//import api from "../axiosConfig.js";
 import axios from "axios";
 
 class showBookDetails extends Component {
@@ -16,7 +15,7 @@ class showBookDetails extends Component {
     // console.log("Print id: " + this.props.match.params.id);
     axios
       .get(
-        "http://gunishbackend.devtron.info:31585/api/books/" +
+        "https://gunishbackend.devtron.info:31585/api/books/" +
           this.props.match.params.id
       )
       .then((res) => {
@@ -32,7 +31,7 @@ class showBookDetails extends Component {
 
   onDeleteClick(id) {
     axios
-      .delete("http://gunishbackend.devtron.info:31585/api/books/" + id)
+      .delete("https://gunishbackend.devtron.info:31585/api/books/" + id)
       .then((res) => {
         this.props.history.push("/");
       })

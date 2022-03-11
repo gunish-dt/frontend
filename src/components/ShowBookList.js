@@ -14,7 +14,7 @@ class ShowBookList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://gunishbackend.devtron.info:31585/api/books")
+      .get("https://gunishbackend.devtron.info:31585/api/books/")
       .then((res) => {
         this.setState({
           books: res.data,
